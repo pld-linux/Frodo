@@ -14,11 +14,11 @@ Patch2:		%{name}-paths.patch
 Patch3:		%{name}-opt.patch
 Patch4:		%{name}-joy.patch
 URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	XFree86-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	autoconf
 Requires:	tk
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -49,8 +49,8 @@ AmigaOS) or keyboard emulation). The full source code in C++ is
 available. Frodo is freeware. Why pay >$40 for a C64 emulator?
 
 %description -l pl
-Frodo jest darmowym, przeno¶nym emulatorem C64 dla BeOS, uniksów, MacOS,
-AmigaOS, RiscOS i WinNT/Win9x.
+Frodo jest darmowym, przeno¶nym emulatorem C64 dla BeOS, uniksów,
+MacOS, AmigaOS, RiscOS i WinNT/Win9x.
 
 %prep
 %setup -q -n Frodo
@@ -71,6 +71,7 @@ CFLAGS="$CFLAGS -DX_USE_SHM -fno-exceptions -fno-rtti -fno-implicit-templates"
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir}/Frodo/{64prgs,64imgs},%{_bindir}}
+
 install Src/Frodo Src/FrodoPC Src/FrodoSC $RPM_BUILD_ROOT%{_bindir}
 install TkGui.tcl "Frodo Logo" $RPM_BUILD_ROOT%{_libdir}/Frodo
 install "1541 ROM" "Basic ROM" "Char ROM" "Kernal ROM" $RPM_BUILD_ROOT%{_libdir}/Frodo
@@ -84,5 +85,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz Docs/*
-%{_libdir}/Frodo
 %attr(755,root,root) %{_bindir}/*
+%{_libdir}/Frodo
