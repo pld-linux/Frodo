@@ -19,8 +19,6 @@ BuildRequires:	libstdc++-devel
 Requires:	tk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Frodo V4.1 is a free, portable C64 emulator for BeOS, Unix, MacOS,
