@@ -1,23 +1,24 @@
---- Frodo.orig/Src/configure.in	Wed Aug  6 20:56:31 1997
-+++ Frodo/Src/configure.in	Tue Feb 27 00:16:23 2001
-@@ -8,11 +8,6 @@
+diff -urN Frodo-4.1b.org/Src/configure.in Frodo-4.1b/Src/configure.in
+--- Frodo-4.1b.org/Src/configure.in	Sat Feb 22 15:26:14 2003
++++ Frodo-4.1b/Src/configure.in	Sat Feb 22 15:27:46 2003
+@@ -10,11 +10,6 @@
  AC_PROG_CPP
  AC_PROG_MAKE_SET
  
--dnl Don't want the default "-O -g" that autoconf uses for gcc.
+-dnl Don't want the default "-O2 -g" that autoconf uses for gcc.
 -if [[ x"$GXX" = "xyes" ]]; then
--  CFLAGS="-O3 -g -fomit-frame-pointer -Wall -Wno-unused -Wno-format -W -Wmissing-prototypes -Wstrict-prototypes"
+-  CFLAGS="-O2 -g -fomit-frame-pointer -Wall -Wno-unused -Wno-format"
 -fi
 -
  UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
  UNAME_SYSTEM=`(uname -s) 2>/dev/null` || UNAME_SYSTEM=unknown
  
-@@ -193,7 +188,7 @@
+@@ -153,7 +148,7 @@
  
  if [[ "$HAVEGCC27" = "y" -a "$HAVEI386" = "y" ]]; then
  # Don't want strength-reduce on the i386, makes the code slower usually.
 -  CFLAGS="$CFLAGS -fno-strength-reduce -DREGPARAM=\"__attribute__((regparm(3)))\""
 +  CFLAGS="$CFLAGS -DREGPARAM=\"__attribute__((regparm(3)))\""
- else if [[ "$TARGET" = "amigaos" ]]; then
+ elif [[ "$TARGET" = "amigaos" ]]; then
    CFLAGS="$CFLAGS -DREGPARAM=\"__attribute__((regargs(4)))\" "
  else

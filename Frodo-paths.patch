@@ -1,6 +1,6 @@
-diff -Nur Frodo.orig/Src/C64_x.i Frodo/Src/C64_x.i
---- Frodo.orig/Src/C64_x.i	Wed Aug  6 20:56:25 1997
-+++ Frodo/Src/C64_x.i	Tue Feb 27 00:40:21 2001
+diff -urN Frodo-4.1b.org/Src/C64_x.i Frodo-4.1b/Src/C64_x.i
+--- Frodo-4.1b.org/Src/C64_x.i	Sat Feb 22 15:26:13 2003
++++ Frodo-4.1b/Src/C64_x.i	Sat Feb 22 15:28:37 2003
 @@ -100,7 +100,7 @@
  	gui = 0;
  #else
@@ -10,21 +10,21 @@ diff -Nur Frodo.orig/Src/C64_x.i Frodo/Src/C64_x.i
  	if (gui) {
  		if (gui->fail) {
  			delete gui; gui = 0;
-diff -Nur Frodo.orig/Src/Makefile.in Frodo/Src/Makefile.in
---- Frodo.orig/Src/Makefile.in	Wed Aug  6 20:56:29 1997
-+++ Frodo/Src/Makefile.in	Tue Feb 27 00:42:07 2001
-@@ -9,7 +9,7 @@
- CXX       = @CXX@
- CPP       = @CPP@
- LIBRARIES = @LIBRARIES@ @LIBS@
--CFLAGS    = @CFLAGS@ @X_CFLAGS@ -I./ -DBROKEN_JOYSTICK_H=@BROKEN_JOYSTICK_H@ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@
-+CFLAGS    = @CFLAGS@ @X_CFLAGS@ -I./ -DBROKEN_JOYSTICK_H=@BROKEN_JOYSTICK_H@ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@ -DFRODO_HOME=$(FRODOHOME)
+diff -urN Frodo-4.1b.org/Src/Makefile.in Frodo-4.1b/Src/Makefile.in
+--- Frodo-4.1b.org/Src/Makefile.in	Sat Feb 22 15:26:14 2003
++++ Frodo-4.1b/Src/Makefile.in	Sat Feb 22 15:29:04 2003
+@@ -8,7 +8,7 @@
+ @SET_MAKE@
+ CXX    = @CXX@
+ LIBS   = @LIBS@
+-CFLAGS = @CFLAGS@ -I./ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@
++CFLAGS = @CFLAGS@ -I./ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@ -DFRODO_HOME=$(FRODOHOME)
  
  INSTALL         = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-diff -Nur Frodo.orig/Src/Prefs.cpp Frodo/Src/Prefs.cpp
---- Frodo.orig/Src/Prefs.cpp	Wed Aug  6 20:56:29 1997
-+++ Frodo/Src/Prefs.cpp	Tue Feb 27 00:40:21 2001
+diff -urN Frodo-4.1b.org/Src/Prefs.cpp Frodo-4.1b/Src/Prefs.cpp
+--- Frodo-4.1b.org/Src/Prefs.cpp	Sat Feb 22 15:26:14 2003
++++ Frodo-4.1b/Src/Prefs.cpp	Sat Feb 22 15:28:37 2003
 @@ -39,7 +39,7 @@
  	for (int i=0; i<4; i++)
  		DriveType[i] = DRVTYPE_DIR;
@@ -34,9 +34,9 @@ diff -Nur Frodo.orig/Src/Prefs.cpp Frodo/Src/Prefs.cpp
  	strcpy(DrivePath[1], "");
  	strcpy(DrivePath[2], "");
  	strcpy(DrivePath[3], "");
-diff -Nur Frodo.orig/Src/main.cpp Frodo/Src/main.cpp
---- Frodo.orig/Src/main.cpp	Wed Aug  6 20:56:31 1997
-+++ Frodo/Src/main.cpp	Tue Feb 27 00:40:21 2001
+diff -urN Frodo-4.1b.org/Src/main.cpp Frodo-4.1b/Src/main.cpp
+--- Frodo-4.1b.org/Src/main.cpp	Sat Feb 22 15:26:14 2003
++++ Frodo-4.1b/Src/main.cpp	Sat Feb 22 15:28:37 2003
 @@ -24,10 +24,10 @@
  #define CHAR_ROM_FILE	"FrodoRsrc:Char_ROM"
  #define FLOPPY_ROM_FILE	"FrodoRsrc:1541_ROM"
