@@ -9,6 +9,7 @@ Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
 # Source0-md5:	095b9f21c03204cc13f7f249e8866cd9
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-opt.patch
+Patch2:		%{name}-alpha.patch
 URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -69,6 +70,7 @@ freeware.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cd Src
