@@ -75,13 +75,11 @@ install TkGui.tcl "Frodo Logo" $RPM_BUILD_ROOT%{_libdir}/Frodo
 install "1541 ROM" "Basic ROM" "Char ROM" "Kernal ROM" $RPM_BUILD_ROOT%{_libdir}/Frodo
 install 64prgs/* $RPM_BUILD_ROOT%{_libdir}/Frodo/64prgs
 
-gzip -9nf CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz Docs/*
+%doc CHANGES Docs/*
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/Frodo
