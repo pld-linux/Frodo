@@ -17,7 +17,6 @@ BuildRequires:	SDL-devel >= 1.2.0
 Requires:	tk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Frodo V4.1 is a free, portable C64 emulator for BeOS, Unix, MacOS,
 AmigaOS, RiscOS and WinNT/95 systems.
@@ -67,7 +66,7 @@ emulacja na klawiaturze). Dostêpne s± pe³ne ¼ród³a w C++. Frodo jest
 freeware.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p1
 %patch1 -p1
 
