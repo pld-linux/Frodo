@@ -5,8 +5,6 @@ Version:	4.1a
 Release:	2
 License:	Noncommercial
 Group:		Applications/Emulators
-Group(de):	Applikationen/Emulators
-Group(pl):	Aplikacje/Emulatory
 Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1a.Src.tar.gz
 Patch0:		%{name}-16+bpp.patch
 Patch1:		%{name}-TkGui.patch
