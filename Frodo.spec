@@ -60,7 +60,7 @@ MacOS, AmigaOS, RiscOS i WinNT/Win9x.
 
 %build
 cd Src
-autoconf
+%{__autoconf}
 CFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
 CFLAGS="$CFLAGS -DX_USE_SHM -fno-exceptions -fno-rtti -fno-implicit-templates"
 %configure
