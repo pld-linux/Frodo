@@ -1,0 +1,54 @@
+diff -Nur Frodo.orig/Src/C64_x.i Frodo/Src/C64_x.i
+--- Frodo.orig/Src/C64_x.i	Wed Aug  6 20:56:25 1997
++++ Frodo/Src/C64_x.i	Tue Feb 27 00:40:21 2001
+@@ -100,7 +100,7 @@
+ 	gui = 0;
+ #else
+ 	// try to start up Tk gui.
+-	gui = new CmdPipe("wish", "TkGui.tcl");
++	gui = new CmdPipe("/usr/bin/wish", FRODO_HOME "TkGui.tcl");
+ 	if (gui) {
+ 		if (gui->fail) {
+ 			delete gui; gui = 0;
+diff -Nur Frodo.orig/Src/Makefile.in Frodo/Src/Makefile.in
+--- Frodo.orig/Src/Makefile.in	Wed Aug  6 20:56:29 1997
++++ Frodo/Src/Makefile.in	Tue Feb 27 00:42:07 2001
+@@ -9,7 +9,7 @@
+ CXX       = @CXX@
+ CPP       = @CPP@
+ LIBRARIES = @LIBRARIES@ @LIBS@
+-CFLAGS    = @CFLAGS@ @X_CFLAGS@ -I./ -DBROKEN_JOYSTICK_H=@BROKEN_JOYSTICK_H@ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@
++CFLAGS    = @CFLAGS@ @X_CFLAGS@ -I./ -DBROKEN_JOYSTICK_H=@BROKEN_JOYSTICK_H@ -DFRODO_HPUX_REV=@HPUX_REV@ -DKBD_LANG=@KBD_LANG@ -DFRODO_HOME=$(FRODOHOME)
+ 
+ INSTALL         = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+diff -Nur Frodo.orig/Src/Prefs.cpp Frodo/Src/Prefs.cpp
+--- Frodo.orig/Src/Prefs.cpp	Wed Aug  6 20:56:29 1997
++++ Frodo/Src/Prefs.cpp	Tue Feb 27 00:40:21 2001
+@@ -39,7 +39,7 @@
+ 	for (int i=0; i<4; i++)
+ 		DriveType[i] = DRVTYPE_DIR;
+ 
+-	strcpy(DrivePath[0], "64prgs");
++	strcpy(DrivePath[0], FRODO_HOME "64prgs");
+ 	strcpy(DrivePath[1], "");
+ 	strcpy(DrivePath[2], "");
+ 	strcpy(DrivePath[3], "");
+diff -Nur Frodo.orig/Src/main.cpp Frodo/Src/main.cpp
+--- Frodo.orig/Src/main.cpp	Wed Aug  6 20:56:31 1997
++++ Frodo/Src/main.cpp	Tue Feb 27 00:40:21 2001
+@@ -24,10 +24,10 @@
+ #define CHAR_ROM_FILE	"FrodoRsrc:Char_ROM"
+ #define FLOPPY_ROM_FILE	"FrodoRsrc:1541_ROM"
+ #else
+-#define BASIC_ROM_FILE	"Basic ROM"
+-#define KERNAL_ROM_FILE	"Kernal ROM"
+-#define CHAR_ROM_FILE	"Char ROM"
+-#define FLOPPY_ROM_FILE	"1541 ROM"
++#define BASIC_ROM_FILE	FRODO_HOME "Basic ROM"
++#define KERNAL_ROM_FILE	FRODO_HOME "Kernal ROM"
++#define CHAR_ROM_FILE	FRODO_HOME "Char ROM"
++#define FLOPPY_ROM_FILE	FRODO_HOME "1541 ROM"
+ #endif
+ 
+ 

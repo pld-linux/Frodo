@@ -1,0 +1,14 @@
+--- Frodo.orig/TkGui.tcl	Sun Jul  5 14:43:05 1998
++++ Frodo/TkGui.tcl	Sun Jul  5 17:17:01 1998
+@@ -1,9 +1,9 @@
+-#!/usr/local/bin/X11/wish
++#!/usr/bin/wish
+ 
+ # Frodo Tk GUI by Lutz Vieweg <lkv@mania.robin.de>
+ # requires Tk >= 4.1
+ 
+-package require Tk 4.1
++#package require Tk 4.1
+ 
+ set prefname "$env(HOME)/.frodorc"
+ 
