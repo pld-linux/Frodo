@@ -6,6 +6,7 @@ Release:	1
 License:	non-commercial
 Group:		Applications/Emulators
 Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
+# Source0-md5:	095b9f21c03204cc13f7f249e8866cd9
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-opt.patch
 URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
