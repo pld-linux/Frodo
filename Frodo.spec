@@ -2,7 +2,7 @@ Summary:	Commodore 64 emulator
 Summary(pl):	Emulator Commodore 64
 Name:		Frodo
 Version:	4.1b
-Release:	1
+Release:	2
 License:	non-commercial
 Group:		Applications/Emulators
 Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
@@ -72,6 +72,7 @@ freeware.
 
 %build
 cd Src
+cp -f /usr/share/automake/config.sub .
 %{__autoconf}
 CFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
 CFLAGS="$CFLAGS -DX_USE_SHM -fno-exceptions -fno-rtti -fno-implicit-templates"
