@@ -1,21 +1,18 @@
 Summary:	Commodore 64 emulator
 Summary(pl):	Emulator Commodore 64
 Name:		Frodo
-Version:	4.1a
-Release:	4
+Version:	4.1b
+Release:	1
 License:	non-commercial
 Group:		Applications/Emulators
-Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1a.Src.tar.gz
-Patch0:		%{name}-16+bpp.patch
-Patch1:		%{name}-TkGui.patch
-Patch2:		%{name}-paths.patch
-Patch3:		%{name}-opt.patch
-Patch4:		%{name}-joy.patch
-Patch5:		%{name}-gcc3.patch
+Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
+Patch0:		%{name}-paths.patch
+Patch1:		%{name}-opt.patch
 URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	libstdc++-devel
+BuildRequires:	SDL-devel >= 1.2.0
 Requires:	tk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,13 +66,9 @@ emulacja na klawiaturze). Dostêpne s± pe³ne ¼ród³a w C++. Frodo jest
 freeware.
 
 %prep
-%setup -q -n Frodo
+%setup -q -n %{name}-%{version}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
 
 %build
 cd Src
@@ -83,7 +76,10 @@ cd Src
 CFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"
 CFLAGS="$CFLAGS -DX_USE_SHM -fno-exceptions -fno-rtti -fno-implicit-templates"
 %configure
-%{__make} all FRODOHOME="\\\"%{_libdir}/Frodo/\\\""
+%{__make} all \
+	FRODOHOME="\\\"%{_libdir}/Frodo/\\\"" \
+	CC=%{__cc} \
+	CXX=%{__cxx}
 
 %install
 rm -rf $RPM_BUILD_ROOT
