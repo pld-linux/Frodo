@@ -11,10 +11,10 @@ Patch0:		%{name}-paths.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-alpha.patch
 URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
+BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	libstdc++-devel
-BuildRequires:	SDL-devel >= 1.2.0
 Requires:	tk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
