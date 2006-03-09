@@ -80,8 +80,8 @@ CFLAGS="$CFLAGS -DX_USE_SHM -fno-exceptions -fno-rtti -fno-implicit-templates"
 %configure
 %{__make} all \
 	FRODOHOME="\\\"%{_libdir}/Frodo/\\\"" \
-	CC=%{__cc} \
-	CXX=%{__cxx}
+	CC="%{__cc}" \
+	CXX="%{__cxx}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
