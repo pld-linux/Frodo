@@ -10,7 +10,7 @@ Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-alpha.patch
-URL:		http://www.uni-mainz.de/~bauec002/FRMain.html
+URL:		http://frodo.cebix.net
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
