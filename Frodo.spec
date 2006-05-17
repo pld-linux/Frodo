@@ -5,12 +5,13 @@ Version:	4.1b
 Release:	3
 License:	non-commercial
 Group:		Applications/Emulators
-Source0:	http://iphcip1.physik.uni-mainz.de/~cbauer/%{name}V4_1b.Src.tar.gz
+#Source0Download: http://frodo.cebix.net/
+Source0:	http://frodo.cebix.net/downloads/%{name}V4_1b.Src.tar.gz
 # Source0-md5:	095b9f21c03204cc13f7f249e8866cd9
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-alpha.patch
-URL:		http://frodo.cebix.net
+URL:		http://frodo.cebix.net/
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
