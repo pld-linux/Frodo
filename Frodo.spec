@@ -1,5 +1,5 @@
 Summary:	Commodore 64 emulator
-Summary(pl):	Emulator Commodore 64
+Summary(pl.UTF-8):   Emulator Commodore 64
 Name:		Frodo
 Version:	4.1b
 Release:	3
@@ -42,29 +42,29 @@ Keyboard and joystick (real joysticks (only under BeOS, Linux and
 AmigaOS) or keyboard emulation). The full source code in C++ is
 available. Frodo is freeware.
 
-%description -l pl
-Frodo jest darmowym, przeno¶nym emulatorem C64 dla BeOS, uniksów,
+%description -l pl.UTF-8
+Frodo jest darmowym, przenoÅ›nym emulatorem C64 dla BeOS, uniksÃ³w,
 MacOS, AmigaOS, RiscOS i WinNT/Win9x.
 
-Ten emulator skupia siê na dok³adnym odtworzeniu specjalnych efektów
-graficznych osi±galnych na C64, wiêc ma dosyæ du¿e wymagania dotycz±ce
-systemu. Powinien byæ uruchamiany tylko na systemach z co najmniej
-PowerPC/Pentium/68060. Frodo jest w stanie uruchomiæ poprawnie
-wiêkszo¶æ gier i dem, nawet te z FLI, FLD, DYCP, otwartymi ramkami,
-zamienianymi duszkami, dekoderami zale¿nymi od czasu, szybkimi
+Ten emulator skupia siÄ™ na dokÅ‚adnym odtworzeniu specjalnych efektÃ³w
+graficznych osiÄ…galnych na C64, wiÄ™c ma dosyÄ‡ duÅ¼e wymagania dotyczÄ…ce
+systemu. Powinien byÄ‡ uruchamiany tylko na systemach z co najmniej
+PowerPC/Pentium/68060. Frodo jest w stanie uruchomiÄ‡ poprawnie
+wiÄ™kszoÅ›Ä‡ gier i dem, nawet te z FLI, FLD, DYCP, otwartymi ramkami,
+zamienianymi duszkami, dekoderami zaleÅ¼nymi od czasu, szybkimi
 loaderami itp. Emulacja 6510: wszystkie nieudokumentowane instrukcje,
-w pe³ni poprawny tryb dziesiêtny, dok³adna emulacja liczby cykli dla
-instrukcji. Emulacja VIC: bazuj±ca na liniach lub cyklach, wszystkie
-tryby wy¶wietlania, duszki z kolizjami i priorytetami, cykle DMA,
+w peÅ‚ni poprawny tryb dziesiÄ™tny, dokÅ‚adna emulacja liczby cykli dla
+instrukcji. Emulacja VIC: bazujÄ…ca na liniach lub cyklach, wszystkie
+tryby wyÅ›wietlania, duszki z kolizjami i priorytetami, cykle DMA,
 otwarte ramki, wszystkie efekty $d011/$d016. Emulacja SID: emulacja
-cyfrowa w czasie rzeczywistym (16 bitów. 44.1kHz), w³±cznie z filtrami
+cyfrowa w czasie rzeczywistym (16 bitÃ³w. 44.1kHz), wÅ‚Ä…cznie z filtrami
 (tylko pod BeOS-em, Linuksem, HP-UX-em, MacOS-em i AmigaOS-em).
-Emulacja 1541: symulacja dysków w katalogach, plikach .d64/x64 albo
-.t64/LYNX, lub emulacja 1541 na poziomie procesora, obs³uguj±ca oko³o
-95%% wszystkich szybkich loaderów i nawet niektóre rodzaje
-zabezpieczeñ przed kopiowaniem. Inne peryferia: klawiatura i joystick
+Emulacja 1541: symulacja dyskÃ³w w katalogach, plikach .d64/x64 albo
+.t64/LYNX, lub emulacja 1541 na poziomie procesora, obsÅ‚ugujÄ…ca okoÅ‚o
+95%% wszystkich szybkich loaderÃ³w i nawet niektÃ³re rodzaje
+zabezpieczeÅ„ przed kopiowaniem. Inne peryferia: klawiatura i joystick
 (prawdziwe joysticki (tylko pod BeOS-em, Linuksem i AmigaOS-em) lub
-emulacja na klawiaturze). Dostêpne s± pe³ne ¼ród³a w C++. Frodo jest
+emulacja na klawiaturze). DostÄ™pne sÄ… peÅ‚ne ÅºrÃ³dÅ‚a w C++. Frodo jest
 freeware.
 
 %prep
