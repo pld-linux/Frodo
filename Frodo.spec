@@ -1,5 +1,5 @@
 Summary:	Commodore 64 emulator
-Summary(pl.UTF-8):   Emulator Commodore 64
+Summary(pl.UTF-8):	Emulator Commodore 64
 Name:		Frodo
 Version:	4.1b
 Release:	3
